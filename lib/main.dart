@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'lessons1/Mercedes.dart';
+
+import 'lessons3/Guitarist.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  Mercedes gle = Mercedes.model("GLE");
-  Mercedes gls = Mercedes.model("GLS");
-  Mercedes gkalss = Mercedes.model("GKalss");
+  Guitarist guitarist = Guitarist("Bob");
 
   @override
   Widget build(BuildContext context) {
-    setSpeed(100);
+    var text = guitarist.playPopMusic(guitarist.play());
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Cars"),
+          title: Text("Musician"),
         ),
         body: Center(
           child: Text(
-            gle.toString(),
+            text,
           style: TextStyle(
               fontSize:32.0,
               fontWeight: FontWeight.bold,
@@ -32,12 +32,6 @@ class MyApp extends StatelessWidget {
       )
     );
   }
-
-  void setSpeed(int speed){
-    var list = [speed, speed * 2];
-    list.forEach(gle.setSpeed);
-  }
-
 }
 
 
