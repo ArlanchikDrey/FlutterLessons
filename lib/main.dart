@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    setSpeed(300);
+    setSpeed(100);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
   }
 
   void setSpeed(int speed){
-    gle.setSpeed(speed);
+    var list = [speed, speed * 2];
+    list.forEach(gle.setSpeed);
   }
 
 }

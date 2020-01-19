@@ -1,5 +1,5 @@
- class Car{
-  int _speed = 0;
+class Car{
+  int speed = 0;
   String name;
   String model;
 
@@ -7,14 +7,9 @@
     this.name = "name";
     this.model = "model";
   }
-  /*
-  * Увеличиваем значение поля при вызове метода на его аргумент**/
-  void setSpeed(int speed){
-    _speed = _speed + speed;
-  }
 
   @override
   String toString() {
-    return "Марка = $name\nMодель = $model\nСкорость = $_speed";
+    return "Марка = $name\nMодель = $model\nСкорость = $speed";
   }
 }
