@@ -1,6 +1,7 @@
-import 'package:ones/dart_tour/types.dart';
+import 'package:ones/dart_tour/TestList.dart';
 
 void main(){
-  String age = parseIntToString(150);
-  print(age);
+  var listUser = [0];
+  TestList ageBrother = TestList();
+  print(ageBrother.getList(listUser));
 }
